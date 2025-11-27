@@ -1,0 +1,14 @@
+namespace = only_time_can_kill
+only_time_can_kill.0001 = {
+	type = character_event
+	title = only_time_can_kill.title
+	desc = only_time_can_kill.desc
+    theme = roaming_activity
+	override_background = council_chamber
+	left_portrait = {
+		character = root
+		animation = chaplain
+	}
+
+    add_trait = only_time_can_kill
+}

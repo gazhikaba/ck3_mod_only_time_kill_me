@@ -1,0 +1,26 @@
+beg_for_health = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_spend_money.dds"
+	}
+	decision_group_type = courtier
+    
+	ai_check_interval = 0
+
+	is_shown = {
+		NOT = {
+			has_trait = only_time_can_kill
+		}
+	}
+
+	effect = {
+		add_trait = only_time_can_kill
+	}
+	
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}

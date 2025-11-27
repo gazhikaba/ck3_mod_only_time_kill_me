@@ -1,0 +1,14 @@
+only_time_can_kill = {
+
+	icon = reincarnation.dds
+
+	no_prowess_loss_from_age = yes
+	
+	inherit_chance = 0
+	
+	birth = 0
+	random_creation = 0
+
+	health = 1
+    epidemic_resistance = 333
+}

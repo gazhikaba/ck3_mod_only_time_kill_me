@@ -1,0 +1,52 @@
+grant_only_time_can_kill = {
+	use_diplomatic_range = no
+	category = interaction_category_friendly
+	ignores_pending_interaction_block = yes
+	icon = alliance
+
+	interface_priority = 1000
+	common_interaction = yes
+
+	is_shown = {
+		scope:recipient = {
+			NOT = { has_trait = only_time_can_kill }
+		}
+        scope:actor = {
+            has_trait = only_time_can_kill
+        }
+		scope:recipient != scope:actor
+	}
+
+	on_accept = {
+		scope:recipient = {
+			add_trait = only_time_can_kill
+		}
+	}
+
+	auto_accept = yes
+}
+
+take_only_time_can_kill = {
+	use_diplomatic_range = no
+	category = interaction_category_hostile
+	ignores_pending_interaction_block = yes
+	icon = alliance
+
+	interface_priority = 1000
+	common_interaction = yes
+
+	is_shown = {
+		scope:recipient = {
+			has_trait = only_time_can_kill
+		}
+		scope:recipient != scope:actor
+	}
+
+	on_accept = {
+		scope:recipient = {
+			remove_trait = only_time_can_kill
+		}
+	}
+
+	auto_accept = yes
+}
